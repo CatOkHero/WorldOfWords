@@ -1,0 +1,82 @@
+﻿<div ng-include="'Views/MessageModal.html'"></div>
+<script type="text/ng-template" id="modalImport">
+    <div class="modal-header bg-primary" align="center">
+        <button class="modal-title close" ng-click="cancel()">x</button>
+        <h3 class="modal-title">Import WordTranslations</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group" ng-hide="showTemplate">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-file btn-default ">
+                                Browse...
+                                <input type="file" id="file" onchange="angular.element(this).scope().getFileName()" accept=".txt">
+                            </span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="File name..." ng-model="fileName">
+                        <span class="input-group-btn">
+                            <button ng-click="openFile()" class="btn btn-default">Open File</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="well" ng-show="showTemplate">
+                    <h4>
+                        <strong>word = translation</strong> <br>
+                        <strong>word = translation</strong> [transcription] <br>
+                        <strong>word = translation</strong> {description} <br>
+                        <strong>word = translation</strong> [transcription] {description} <br>
+                        <strong>word = translation</strong> {description} [transcription] <br><br>
+                        <em>Example:</em> <br><br>
+                        ability	=	уміння <br>
+                        ability	=	спроможність [əˈbɪləti] <br>
+                        ability	=	здібність {talent, skill to do smth} [əˈbɪləti] <br><br>
+                        <strong>word = translation</strong> is required, 
+                        transcription and description may be missed and stay in different order.<br><br>
+                        All units may be non-separated or be separated by spaces or tabulations.
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-2" align="right">
+                <strong>Template</strong>
+                <span class="glyphicon glyphicon-question-sign" ng-mouseenter="showTemplate = true" ng-mouseleave="showTemplate = false"></span> 
+            </div>
+        </div>
+        <hr ng-show="wordTranslationsToShow.length">
+        <div class="row">
+            <div class="form-group col-xs-12 col-md-6 col-lg-4" ng-repeat="wt in wordTranslationsToShow">
+                <div class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon left-block"><strong>{{wt.originalWord}} — {{wt.translationWord}}</strong></div>
+                        <span class="input-group-addon">
+                            <input type="checkbox" ng-model="wt.isChosen" ng-click="checkAllSelected()">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" ng-show="wordTranslations.length">
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-click="selectAll(areAllSelected)" ng-model="areAllSelected" ng-init="areAllSelected = true">Select all
+            </label>
+        </div>
+        <div class="row" align="center" ng-show="wordTranslations.length > 21">
+            <pagination boundary-links="true"
+                        total-items="wordTranslations.length"
+                        items-per-page="itemsPerPage"
+                        max-size="10"
+                        ng-model="currentPage"
+                        ng-change="showWordTranslations()"
+                        class="pagination-sm"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="First" last-text="Last">
+            </pagination>
+        </div>
+    </div>
+    <div class="modal-footer" ng-show="wordTranslations.length">
+        <button class="btn btn-primary" ng-click="import()" ng-hide="isProcessing">Import WordTranslations</button>
+        <progressbar class="progress-striped active" ng-show="isProcessing" value="100" type="primary">
+            Please wait, your request is processing...
+        </progressbar>
+    </div>
+</script>

@@ -1,0 +1,30 @@
+﻿<div ng-include="'Views/MessageModal.html'"></div>
+<div ng-include="'Views/ConfirmModal.html'"></div>
+<header class="text-center">
+    <h2>Languages</h2>
+</header>
+<br>
+<div align="center">
+    <table class="table table-striped width-quarter" ng-show="languages.length">
+        <tr>
+            <td><strong>Name</strong></td>
+            <td align="right"><strong>Delete</strong></td>
+        </tr>
+        <tr ng-repeat="language in languages">
+            <td><h4>{{language.Name}}</h4></td>
+            <td align="right">
+                <button class="btn btn-default nomargins" ng-click="removeLanguage($index)">
+                    <span class="glyphicon glyphicon-remove-circle"></span>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div align="center">
+    <form class="input-group width-quarter">
+        <input class="form-control" type="text" ng-model="newLanguageName" placeholder="Language name">
+        <span class="input-group-btn">
+            <button class="btn btn-default btn-block" ng-click="addLanguage()">Add</button>
+        </span>
+    </form>
+</div>

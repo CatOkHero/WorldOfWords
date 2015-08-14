@@ -1,0 +1,138 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldofWords", "WorldofWords\WorldofWords.csproj", "{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{192C8A17-D226-42C2-A5E0-63790B4B046A} = {192C8A17-D226-42C2-A5E0-63790B4B046A}
+		{1F9627C7-001B-47CF-8F45-CAAF14EFB26F} = {1F9627C7-001B-47CF-8F45-CAAF14EFB26F}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F9BBC49C-E16D-493F-8411-CAE9FEA9A74A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		packages\Node.js.0.12.0\readme.txt = packages\Node.js.0.12.0\readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.API.Models", "WorldOfWords.API.Models\WorldOfWords.API.Models.csproj", "{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1} = {0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.Domain.Models", "WorldOfWords.Domain.Models\WorldOfWords.Domain.Models.csproj", "{0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.Domain.Services", "WorldOfWords.Domain.Services\WorldOfWords.Domain.Services.csproj", "{BEE0BDD1-EA68-4520-A5AB-26CB3C34F001}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1} = {27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.Infrastructure.Data.EF", "WorldOfWords.Infrastructure.Data.EF\WorldOfWords.Infrastructure.Data.EF.csproj", "{1F9627C7-001B-47CF-8F45-CAAF14EFB26F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.Validation", "WorldOfWords.Validation\WorldOfWords.Validation.csproj", "{192C8A17-D226-42C2-A5E0-63790B4B046A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.Tests", "WorldOfWords.Tests\WorldOfWords.Tests.csproj", "{1BFDC348-3991-4FB7-80C5-ADA22B26567F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C} = {975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1} = {27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{29D4677C-C435-48B7-A00D-CC6883D6601E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldOfWords.API.Models.Tests", "WorldOfWords.API.Models.Tests\WorldOfWords.API.Models.Tests.csproj", "{782AA800-EEDD-46A7-B2FA-3214AE931138}"
+	ProjectSection(ProjectDependencies) = postProject
+		{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C} = {975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1} = {27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}
+		{BEE0BDD1-EA68-4520-A5AB-26CB3C34F001} = {BEE0BDD1-EA68-4520-A5AB-26CB3C34F001}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{3393AEB0-4967-49BA-A397-23B89E554DD3}"
+	ProjectSection(SolutionItems) = preProject
+		packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll = packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll
+		packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.XML = packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.XML
+		packages\Owin.1.0\lib\net40\Owin.dll = packages\Owin.1.0\lib\net40\Owin.dll
+		packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll = packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs12.training.local:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WorldofWords\\WorldofWords.csproj
+		SccProjectName1 = WorldofWords
+		SccLocalPath1 = WorldofWords
+		SccProjectUniqueName2 = WorldOfWords.API.Models\\WorldOfWords.API.Models.csproj
+		SccProjectName2 = WorldOfWords.API.Models
+		SccLocalPath2 = WorldOfWords.API.Models
+		SccProjectUniqueName3 = WorldOfWords.Domain.Models\\WorldOfWords.Domain.Models.csproj
+		SccProjectName3 = WorldOfWords.Domain.Models
+		SccLocalPath3 = WorldOfWords.Domain.Models
+		SccProjectUniqueName4 = WorldOfWords.Domain.Services\\WorldOfWords.Domain.Services.csproj
+		SccProjectName4 = WorldOfWords.Domain.Services
+		SccLocalPath4 = WorldOfWords.Domain.Services
+		SccProjectUniqueName5 = WorldOfWords.Infrastructure.Data.EF\\WorldOfWords.Infrastructure.Data.EF.csproj
+		SccProjectName5 = WorldOfWords.Infrastructure.Data.EF
+		SccLocalPath5 = WorldOfWords.Infrastructure.Data.EF
+		SccProjectUniqueName6 = WorldOfWords.Validation\\WorldOfWords.Validation.csproj
+		SccProjectName6 = WorldOfWords.Validation
+		SccLocalPath6 = WorldOfWords.Validation
+		SccProjectUniqueName7 = WorldOfWords.Tests\\WorldOfWords.Tests.csproj
+		SccProjectTopLevelParentUniqueName7 = WorldofWords.sln
+		SccProjectName7 = WorldOfWords.Tests
+		SccLocalPath7 = WorldOfWords.Tests
+		SccProjectUniqueName8 = WorldOfWords.API.Models.Tests\\WorldOfWords.API.Models.Tests.csproj
+		SccProjectTopLevelParentUniqueName8 = WorldofWords.sln
+		SccProjectName8 = WorldOfWords.API.Models.Tests
+		SccLocalPath8 = WorldOfWords.API.Models.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{975A4B51-32DE-4B6E-B6A0-C2A0FD23141C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F86FCD-B263-4B3D-A6EE-AF10653EE5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0F89C2-6D9A-4CD5-BE02-6EEEDEF7C7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE0BDD1-EA68-4520-A5AB-26CB3C34F001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE0BDD1-EA68-4520-A5AB-26CB3C34F001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE0BDD1-EA68-4520-A5AB-26CB3C34F001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE0BDD1-EA68-4520-A5AB-26CB3C34F001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9627C7-001B-47CF-8F45-CAAF14EFB26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9627C7-001B-47CF-8F45-CAAF14EFB26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9627C7-001B-47CF-8F45-CAAF14EFB26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9627C7-001B-47CF-8F45-CAAF14EFB26F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192C8A17-D226-42C2-A5E0-63790B4B046A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192C8A17-D226-42C2-A5E0-63790B4B046A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192C8A17-D226-42C2-A5E0-63790B4B046A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192C8A17-D226-42C2-A5E0-63790B4B046A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFDC348-3991-4FB7-80C5-ADA22B26567F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFDC348-3991-4FB7-80C5-ADA22B26567F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFDC348-3991-4FB7-80C5-ADA22B26567F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFDC348-3991-4FB7-80C5-ADA22B26567F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782AA800-EEDD-46A7-B2FA-3214AE931138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782AA800-EEDD-46A7-B2FA-3214AE931138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782AA800-EEDD-46A7-B2FA-3214AE931138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782AA800-EEDD-46A7-B2FA-3214AE931138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BFDC348-3991-4FB7-80C5-ADA22B26567F} = {29D4677C-C435-48B7-A00D-CC6883D6601E}
+		{782AA800-EEDD-46A7-B2FA-3214AE931138} = {29D4677C-C435-48B7-A00D-CC6883D6601E}
+		{3393AEB0-4967-49BA-A397-23B89E554DD3} = {29D4677C-C435-48B7-A00D-CC6883D6601E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿<h1>Login Page</h1>
+<p>{{label}}</p>
+<div class="LoginDiv" id="LoginDiv" ng-app="MyApp">
+    
+        <input type="text" id="LoginInput" />
+        <input type="text" id="PasswordInput" />
+    <button id="Login" ng-app="MyApp" ng-click="call();">
+        {{label}}
+    </button>
+    <div ng-controller="LoginController">
+        <ul>
+            <li ng-repeat="x in label" ng-clik="call();">
+                {{ x.Name }}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿<div class="text-center table" align="center">
+    <div>
+        <h2>Your Profile</h2>
+    </div>
+    <div class="row" align="center">
+        <table class="table text-center table-bordered" id="editProfileTable">
+            <tr>
+                <td>
+    <div class="name-change">
+        <div id="nameTitle" ng-hide="showName">
+            <div class="name-title">
+                <label>Name: </label>
+                                <label id="userNameStyle"><span ng-bind="userName"></span></label>
+                <a id="editName" ng-click="hideNameTitle();">
+                                <span class="btn glyphicon glyphicon-pencil"></span>
+                </a>
+            </div>
+        </div>
+        <div id="changeName" ng-show="showName">
+            <form id="editNameForm" class="form-horizontal" role="form">
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-12">Changing Name</label>
+                </div>
+                <div class="form-group form-inline">
+                    <label class="text-center control-label col-sm-6">New Name</label>
+                                    <input type="text" id="userNewName" class="form-control col-sm-6" ng-model="userNewName" value="" placeholder="{{userName}}"/>
+                </div>
+                <div class="form-group form-inline">
+                    <div class="form-group form-inline">
+                                        <input type="submit" class="form-control btn btn-primary col-sm-6" value="Change Name" id="editUserProfileBtn" ng-click="submitChangeName()" />
+                                        <input type="submit" class="form-control btn btn-primary col-sm-6" value="Cancel" id="editUserProfileBtn" ng-click="hideData()" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+    <div class="password-change">
+        <div id="passwordTitle" ng-hide="showPassword">
+                            <div class="password-title col-sm-12">
+                <label>Password: </label>
+                *****
+                <a id="editPassword" ng-click="hidePasswordTitle()">
+                                    <span class="btn glyphicon glyphicon-pencil"></span>
+                </a>
+            </div>
+        </div>
+        <div id="changePassword" ng-show="showPassword">
+            <form id="editPasswordForm" class="form-horizontal" role="form">
+                <label class="form-horizontal col-sm-12">Changing Password</label>
+                <div class="form-group  form-inline">
+                    <label class="text-center control-label col-sm-6">Current Password</label>
+                    <input type="password" id="userCurrentPassword" class="form-control col-sm-6" ng-model="userCurrentPassword" value=""/>
+                </div>
+                <div class="form-group form-inline">
+                    <label class="text-center control-label col-sm-6">New Password</label>
+                                    <input type="password" name="password" id="password" ng-model="userNewPassword" ng-model-options="{allowInvalid: true}" pattern-validator="((?=.*\d)(?=.*[A-Z])(?=.*\W).{8,8})" class="form-control col-sm-6"/>
+                                </div>
+                                <div>
+                                    <password-strength ng-model="userNewPassword" ng-hide="showStrenght"></password-strength>
+                </div>
+                <div class="form-group form-inline">
+                    <label class="text-center control-label col-sm-6">Confirm Password</label>
+                                    <input type="password" id="userConfirmNewPassword" class="form-control col-sm-6" ng-model="userConfirmNewPassword"/>
+                </div>
+                <div class="form-group form-inline">
+                    <div class="form-group form-inline">
+                                        <input type="submit" class="form-control btn btn-primary col-sm-6" value="Change Password" id="editUserProfileBtn" ng-click="submitChangePassword()" />
+                                        <input type="submit" class="form-control btn btn-primary col-sm-6" value="Cancel" id="editUserProfileBtn" ng-click="hideData()" />
+                    </div>
+                </div>
+            </form>
+        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <label ng-model="labelModel" ng-show="showLabel" id="editProfileLabel">{{message}}</label>
+</div>

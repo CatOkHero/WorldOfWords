@@ -1,0 +1,13 @@
+﻿<h1>Courses Page</h1>
+<p>{{label}}</p>
+<div>
+    <ul>
+        <li ng-repeat="x in names">
+            <div><a ng-click="showDetails = ! showDetails">Course: {{x.Name}}</a></div>
+            <div href="Index#/Courses" class="procedure-details" ng-show="showDetails">
+                <!-- For wordsuits  - ul, ng-repeat, x.WordSuites.Name -->
+                <div>OwnerId: {{x.OwnerId}}</div>
+            </div>
+        </li>
+    </ul>
+</div>
