@@ -8,6 +8,7 @@ using WorldOfWords.Domain.Services;
 namespace WorldofWords.Controllers
 {
     [WowAuthorization(Roles = "Teacher")]
+    [RoutePrefix("api/Group")]
     public class GroupController : BaseController
     {
         private readonly IGroupForListingMapper _groupForListingMapper;
